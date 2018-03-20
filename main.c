@@ -1,5 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include "selecao.h"
+#include "quickselection.h"
 
 int* reading_file(const char *file_in) {
     int *vector;
@@ -67,7 +69,7 @@ int main(int argc, char *argv[]) {
     min = 0;
     max = size_of_vector;
 
-    selecao(vector,min,max);
+    quick_selection(vector,min,max);
 
     save_vector_file(file_out,vector, 0, max);
     return 0;
