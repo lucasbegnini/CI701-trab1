@@ -4,6 +4,6 @@
 #include "selecao.h"
 
 int *quick_selection(int *vector, int a, int b);
-int particiona(int *vector, int a, int b, int vb);
+int particiona(int *vector, int p, int q);
 
 #endif
