@@ -12,17 +12,20 @@ int particiona(int *vector, int p, int q) {
         }
     }
     troca(vector,p,i);
+
     return i;
 }
 
 int *quick_selection(int *vector, int a, int b) {
-    int m;
-    if ( a < b) {
-    m = particiona(vector,a,b);
+    int m,k;
+    k = 3;
+    if ((b-a+1) < k) {
+        selecao(vector,a,b);
+        return vector;
+    }
     
+    m = particiona(vector,a,b);
     quick_selection(vector,a,m-1);
     quick_selection(vector,m+1,b);
     return vector;
-
-    }
 }
