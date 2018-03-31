@@ -2,14 +2,14 @@
 #include "selecao.h"
 
 int minimo(int *vector, int a, int b) {
-    int i = a;
-    int m = a;
-
-    while (i < b) {
-        i++;
-        if(vector[i] < vector[m])
-            m = i;
+    int m;
+    if (a == b)
+        return a;
+    m = minimo(vector,a,b-1);
+    if ( vector[b] < vector[m]) {
+        m = b;
     }
+
     return m;
 }
 
