@@ -19,7 +19,7 @@ int particiona(int *vector, int p, int q) {
 int *quick_selection(int *vector, int a, int b) {
     int m,k;
     k = 3;
-    if ((b-a+1) < k) {
+/*    if ((b-a+1) < k) {
         selecao(vector,a,b);
         return vector;
     }
@@ -27,5 +27,11 @@ int *quick_selection(int *vector, int a, int b) {
     m = particiona(vector,a,b);
     quick_selection(vector,a,m-1);
     quick_selection(vector,m+1,b);
-    return vector;
+    return vector; */
+
+    if(a < b) {
+      m = particiona(vector,a,b);
+    quick_selection(vector,a,m-1);
+    quick_selection(vector,m+1,b);  
+    }
 }

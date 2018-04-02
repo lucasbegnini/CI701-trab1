@@ -8,7 +8,7 @@ int* reading_file(const char *file_in) {
 
     printf("abrindo arquivo %s \n", file_in);
 
-    file = fopen("text1.txt","rw");
+    file = fopen(file_in,"r");
     if(file == 0) {
         printf ("Falha ao abri o arquivo \n");
         fclose(file);
@@ -20,7 +20,7 @@ int* reading_file(const char *file_in) {
     while( fscanf(file, "%d \n", &x) != EOF ) {
         count++;
     }
-    printf("numeros de elementos no vector %d \n",count);
+
     fclose(file);    
 
     vector = (int *) malloc(count * sizeof(int));
