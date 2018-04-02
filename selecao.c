@@ -30,8 +30,6 @@ int * ordenar(int *vector, int a, int b) {
 
 int *selecao(int *vector, int a, int b) {
     int *vectorOut;
-    int min = a;
-    int max = b;
     printf("Ordenou por selecao \n");
     vectorOut = ordenar(vector,a,b);
     return vectorOut;

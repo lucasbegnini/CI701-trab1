@@ -35,8 +35,10 @@ int get_number_of_elements(const char *file_in) {
 int save_vector_file(const char *file_out, int*vector, int min, int max) {
     FILE* file;
     int i;
+    char* clean_char;
+    clean_char = "";
     file = fopen( file_out,"w+");
-    fprintf(file, "");
+    fprintf(file, clean_char);
     fclose(file);
     file = fopen( file_out,"a");
     for (i = min; i < max ; i++) {
@@ -44,4 +46,5 @@ int save_vector_file(const char *file_out, int*vector, int min, int max) {
     }
     fclose(file);
     printf("salvou o arquivo %s com sucesso \n", file_out);
+    return 0;
 }

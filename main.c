@@ -9,6 +9,8 @@ int main(int argc, char *argv[]) {
     int* vector;
     int size_of_vector,min,max;
     char *file_out, *file_in;
+    double dif;
+    clock_t start, end;
 
     if(argc != 3) {
         printf("faltando argumentos \n");
@@ -25,13 +27,13 @@ int main(int argc, char *argv[]) {
     min = 0;
     max = size_of_vector;
     
-    clock_t start = clock();
+    start = clock();
 
     quick_selection(vector,min,max);
     
-    clock_t end = clock();
-    double dif = difftime (end,start);
-    printf ("Your calculations took %.2lf to run.\n", dif );
+    end = clock();
+    dif = difftime (end,start);
+    printf ("Your calculations took %f to run.\n", dif );
     save_vector_file(file_out,vector, 0, max);
     return 0;
 }
