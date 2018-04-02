@@ -32,10 +32,11 @@ int quick_selection(int *vector, int a, int b) {
 
 int quick_sort(int *vector, int a, int b) {
     int m;
+
     if(a < b) {
         m = particiona(vector,a,b);
-        quick_selection(vector,a,m-1);
-        quick_selection(vector,m+1,b);  
+        quick_sort(vector,a,m-1);
+        quick_sort(vector,m+1,b);  
     }
 
     return 0; 

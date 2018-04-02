@@ -29,7 +29,7 @@ int main(int argc, char *argv[]) {
     
     start = clock();
 
-    quick_selection(vector,min,max);
+    selecao(vector,min,max);
     
     end = clock();
     dif = difftime (end,start);

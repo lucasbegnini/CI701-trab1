@@ -28,9 +28,7 @@ int * ordenar(int *vector, int a, int b) {
     return ordenar(vector, a+1, b);
 }
 
-int *selecao(int *vector, int a, int b) {
-    int *vectorOut;
-    printf("Ordenou por selecao \n");
-    vectorOut = ordenar(vector,a,b);
-    return vectorOut;
+int selecao(int *vector, int a, int b) {
+    ordenar(vector,a,b);
+    return 0;
 }
