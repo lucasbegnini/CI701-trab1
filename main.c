@@ -8,18 +8,19 @@
 int main(int argc, char *argv[]) {
     int* vector;
     int size_of_vector,min,max;
-    char *file_out;
+    char *file_out, *file_in;
 
     if(argc != 3) {
         printf("faltando argumentos \n");
         return 0;
     }
 
+    file_in = argv[1];
     file_out = argv[2];
-    vector = reading_file(argv[1]);
 
-    size_of_vector =sizeof(vector)/sizeof(int);
-
+    size_of_vector = get_number_of_elements(file_in);
+    vector = malloc(size_of_vector * sizeof(int));
+    reading_file(file_in,vector);
     printf("numeros de elementos no vector %d \n",size_of_vector);
     min = 0;
     max = size_of_vector;
