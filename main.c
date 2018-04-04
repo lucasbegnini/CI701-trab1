@@ -33,7 +33,7 @@ int main(int argc, char *argv[]) {
     
     end = clock();
     dif = difftime (end,start);
-    printf ("Your calculations took %f to run.\n", dif );
+    printf ("A ordenacao demorou %f .\n", dif );
     save_vector_file(file_out,vector, 0, max);
     return 0;
 }
